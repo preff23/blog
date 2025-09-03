@@ -1,0 +1,81 @@
+.tabs-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tabs-header {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.tab-button {
+  padding: 1rem 2rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color 0.2s;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-button.active {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+.tab-content {
+  padding: 2rem;
+  background: var(--bg-card);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.team-member {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.member-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  background: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.member-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.member-role {
+  color: var(--accent-color);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.member-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .team-member {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .member-photo {
+    margin: 0 auto;
+  }
+}
